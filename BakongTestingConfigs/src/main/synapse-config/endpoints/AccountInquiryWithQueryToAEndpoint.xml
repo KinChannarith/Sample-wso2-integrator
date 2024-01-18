@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="AccountInquiryWithQueryToAEndpoint" xmlns="http://ws.apache.org/ns/synapse">
+    <http method="get" uri-template="http://192.168.19.7:3003/ServerA/accountInquiryWithQuery?accountNumber={uri.var.accountNumber}">
+        <suspendOnFailure>
+            <initialDuration>-1</initialDuration>
+            <progressionFactor>1.0</progressionFactor>
+        </suspendOnFailure>
+        <markForSuspension>
+            <retriesBeforeSuspension>0</retriesBeforeSuspension>
+        </markForSuspension>
+    </http>
+</endpoint>

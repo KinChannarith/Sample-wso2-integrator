@@ -1,0 +1,11 @@
+---
+key: "ServiceAAPI-1.0.0"
+name : "ServiceAAPI"
+displayName : "ServiceAAPI"
+description: "Sample API"
+version: "1.0.0"
+serviceUrl: "https://{MI_HOST}:{MI_PORT}/servicea"
+definitionType: "OAS3"
+securityType: "BASIC"
+mutualSSLEnabled: false
+apiId : "null"

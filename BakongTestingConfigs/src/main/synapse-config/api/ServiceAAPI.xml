@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/servicea" name="ServiceAAPI" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/accountInquiry">
+        <inSequence>
+            <call>
+                <endpoint key="InquiryToAEndpoint"/>
+            </call>
+            <datamapper config="gov:datamapper/NewConfig.dmc" inputSchema="gov:datamapper/NewConfig_inputSchema.json" inputType="JSON" outputSchema="gov:datamapper/NewConfig_outputSchema.json" outputType="JSON" xsltStyleSheet="gov:datamapper/NewConfig_xsltStyleSheet.xml"/>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/accountInquiryWithQuery/{accountNumber}">
+        <inSequence>
+            <payloadFactory media-type="json">
+                <format>{&#xd;
+"accountNumber": "$1"&#xd;
+}</format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:uri.var.accountNumber"/>
+                </args>
+            </payloadFactory>
+            <call>
+                <endpoint key="AccountInquiryWithQueryToAEndpoint"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="POST" uri-template="/transfer">
+        <inSequence>
+            <payloadFactory media-type="json">
+                <format>{&#xd;
+"amount": "$1",&#xd;
+"fromAccountNumber":"$2",&#xd;
+"toAccountNumber":"$3",&#xd;
+"ccy": "$4"&#xd;
+}</format>
+                <args>
+                    <arg evaluator="xml" expression=" $body//amount"/>
+                    <arg evaluator="xml" expression="$body//fromAccountNumber"/>
+                    <arg evaluator="xml" expression="$body//toAccountNumber"/>
+                    <arg evaluator="xml" expression="$body//ccy"/>
+                </args>
+            </payloadFactory>
+            <call>
+                <endpoint key="TransferEndpoint"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>

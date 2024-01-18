@@ -1,0 +1,12 @@
+map_S_root_S_root = function(){ 
+var outputroot={};
+
+outputroot =  {};
+outputroot.source = inputroot.source;
+outputroot.accountNumber = inputroot.accountNumber;
+outputroot.fullAccountInfo = inputroot.accountName.toString().concat(' | ',inputroot.accountNumber);
+return outputroot;
+};
+
+
+

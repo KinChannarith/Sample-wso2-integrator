@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="InquiryEndpoint" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/InquiryEndpoint.xml</file>
+    </artifact>
+    <artifact name="ServiceBAPI" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/ServiceBAPI.xml</file>
+    </artifact>
+    <artifact name="ServiceBAPI_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ServiceBAPI_swagger.yaml</file>
+    </artifact>
+    <artifact name="ServiceBAPI_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ServiceBAPI_metadata.yaml</file>
+    </artifact>
+    <artifact name="AccountInquiryWithQueryEndpoint" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/AccountInquiryWithQueryEndpoint.xml</file>
+    </artifact>
+    <artifact name="ServiceAAPI" groupId="com.example.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/ServiceAAPI.xml</file>
+    </artifact>
+    <artifact name="ServiceAAPI_swagger" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ServiceAAPI_swagger.yaml</file>
+    </artifact>
+    <artifact name="ServiceAAPI_metadata" groupId="com.example.metadata" version="1.0.0" type="synapse/metadata" serverRole="EnterpriseServiceBus">
+        <file>src/main/resources/metadata/ServiceAAPI_metadata.yaml</file>
+    </artifact>
+    <artifact name="InquiryToAEndpoint" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/InquiryToAEndpoint.xml</file>
+    </artifact>
+    <artifact name="AccountInquiryWithQueryToAEndpoint" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/AccountInquiryWithQueryToAEndpoint.xml</file>
+    </artifact>
+    <artifact name="TransferEndpoint" groupId="com.example.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/TransferEndpoint.xml</file>
+    </artifact>
+</artifacts>

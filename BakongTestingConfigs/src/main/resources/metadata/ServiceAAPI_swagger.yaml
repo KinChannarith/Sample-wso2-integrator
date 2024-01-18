@@ -1,0 +1,41 @@
+openapi: 3.0.1
+info:
+  title: ServiceAAPI
+  description: API Definition of ServiceAAPI
+  version: 1.0.0
+servers:
+- url: http://localhost:8290/servicea
+paths:
+  /accountInquiry:
+    get:
+      responses:
+        default:
+          description: Default response
+  /accountInquiryWithQuery/{accountNumber}:
+    get:
+      parameters:
+      - name: accountNumber
+        in: path
+        required: true
+        style: simple
+        explode: false
+        schema:
+          type: string
+      responses:
+        default:
+          description: Default response
+  /transfer:
+    post:
+      requestBody:
+        description: Sample Payload
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                payload:
+                  type: object
+        required: false
+      responses:
+        default:
+          description: Default response

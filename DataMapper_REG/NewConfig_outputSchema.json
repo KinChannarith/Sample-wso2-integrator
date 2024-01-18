@@ -1,0 +1,21 @@
+{
+  "$schema" : "http://wso2.org/json-schema/wso2-data-mapper-v5.0.0/schema#",
+  "outputType" : "JSON",
+  "id" : "",
+  "title" : "root",
+  "type" : "object",
+  "properties" : {
+    "source" : {
+      "id" : "null/0",
+      "type" : "string"
+    },
+    "accountNumber" : {
+      "id" : "null/0",
+      "type" : "string"
+    },
+    "fullAccountInfo" : {
+      "id" : "null/0",
+      "type" : "string"
+    }
+  }
+}

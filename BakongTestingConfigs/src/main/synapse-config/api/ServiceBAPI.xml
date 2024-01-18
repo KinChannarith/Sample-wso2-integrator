@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/serviceb" name="ServiceBAPI" statistics="enable" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/accountInquiry">
+        <inSequence>
+            <call>
+                <endpoint key="InquiryEndpoint"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+    <resource methods="GET" uri-template="/accountInquiryWithQuery/{accountNumber}">
+        <inSequence>
+            <payloadFactory media-type="json">
+                <format>{&#xd;
+"accountNumber": "$1"&#xd;
+}</format>
+                <args>
+                    <arg evaluator="xml" expression="$ctx:uri.var.accountNumber"/>
+                </args>
+            </payloadFactory>
+            <call>
+                <endpoint key="AccountInquiryWithQueryEndpoint"/>
+            </call>
+            <respond/>
+        </inSequence>
+        <outSequence/>
+        <faultSequence/>
+    </resource>
+</api>
